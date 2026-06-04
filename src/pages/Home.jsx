@@ -238,7 +238,7 @@ function Home() {
             </Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: window.innerWidth < 768 ? 'repeat(2,1fr)' : 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px' }}>
-            {trending.slice(0, 18).map(anime => (
+            {trending.slice(0, 12).map(anime => (
               <AniCard key={anime.id} anime={anime} />
             ))}
           </div>
@@ -255,7 +255,7 @@ function Home() {
             </Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: window.innerWidth < 768 ? 'repeat(2,1fr)' : 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px' }}>
-            {seasonal.slice(0, 18).map(anime => (
+            {seasonal.slice(0, 12).map(anime => (
               <AniCard key={anime.id} anime={anime} />
             ))}
           </div>
@@ -272,7 +272,7 @@ function Home() {
             </Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: window.innerWidth < 768 ? 'repeat(2,1fr)' : 'repeat(auto-fill, minmax(160px, 1fr))', gap: '16px' }}>
-            {popular.slice(0, 18).map(anime => (
+            {popular.slice(0, 12).map(anime => (
               <AniCard key={anime.id} anime={anime} />
             ))}
           </div>
