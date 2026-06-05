@@ -1,16 +1,119 @@
-# React + Vite
+# Baka — Anime Discovery Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A production-ready anime discovery platform built with React, Vite, AniList GraphQL API, and Jikan REST API. Users can explore trending, seasonal, and top-rated anime, view detailed anime information, watch trailers, browse genres, and manage personalized watchlists.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 https://baka-anime.vercel.app
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Trending, Seasonal, and Top-Rated Anime Discovery
+* Advanced Anime Search with Debouncing
+* Detailed Anime Information Pages
+* Trailer Integration
+* Recommendation System
+* Genre-Based Browsing
+* Persistent Watchlist Management
+* Session-Based API Caching
+* Skeleton Loading States
+* Error Handling and Retry Mechanisms
+* Fully Responsive Mobile/Desktop Experience
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+* React 18
+* Vite
+* JavaScript
+* Tailwind CSS
+* React Router
+
+### APIs
+
+* AniList GraphQL API
+* Jikan REST API
+
+### Storage
+
+* SessionStorage (Caching)
+* localStorage (Watchlist Persistence)
+
+### Deployment
+
+* Vercel
+
+## Architecture
+
+src/
+├── components/
+├── pages/
+├── services/
+├── App.jsx
+└── main.jsx
+
+* Components: Reusable UI building blocks
+* Pages: Route-level screens
+* Services: API communication layer
+* React Router: Client-side routing
+
+## Performance Optimizations
+
+### Session-Based Caching
+
+API responses are cached using sessionStorage to reduce redundant requests and improve navigation speed.
+
+### Debounced Search
+
+Search requests are delayed by 500ms to prevent unnecessary API calls while users are typing.
+
+### Lazy Loading
+
+Images are loaded only when needed to improve page performance.
+
+## API Integration
+
+### AniList GraphQL API
+
+Used for:
+
+* Trending Anime
+* Seasonal Anime
+* Top Rated Anime
+* Anime Details
+* Recommendations
+* Search
+
+### Jikan REST API
+
+Used for:
+
+* Character Information
+* Genre Data
+* Genre-Based Anime Discovery
+
+## Challenges Solved
+
+### API Rate Limiting (429 Errors)
+
+Implemented session-based caching and optimized request workflows to minimize redundant API calls and improve user experience.
+
+### Cross-Device Responsiveness
+
+Designed layouts that adapt seamlessly across mobile and desktop devices.
+
+## Future Enhancements
+
+* User Authentication
+* Cloud-Synced Watchlists
+* Ratings and Reviews
+* Advanced Search Filters
+* Pagination
+* Airing Schedule Tracking
+
+## Author
+
+Hrushikesh Kontham
+
+GitHub: https://github.com/Hrushikesh-Kontham
