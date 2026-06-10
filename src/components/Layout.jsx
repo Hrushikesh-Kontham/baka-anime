@@ -24,7 +24,9 @@ useEffect(() => {
   }, [])
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#0a0a0a', color: '#fff' }}>
+    <div style={{ minHeight: '100vh',
+      backgroundColor:'#0a0a0a',
+      color: '#fff' }}>
       <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
       <div style={{ display: 'flex', paddingTop: '60px' }}>
