@@ -77,6 +77,7 @@ src/
 
 ## Data Flow
 
+```text
 User Action
     ↓
 React Component
@@ -92,7 +93,7 @@ Response
 State Update
     ↓
 UI Re-render
-
+```
 
 ## Performance Optimizations
 
