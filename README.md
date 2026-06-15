@@ -6,6 +6,19 @@ A production-ready anime discovery platform built with React, Vite, AniList Grap
 
 🔗 https://baka-anime.vercel.app
 
+## Overview
+
+Baka is a modern anime discovery platform that aggregates data from AniList GraphQL and Jikan REST APIs. It enables users to discover trending, seasonal, top-rated, and genre-based anime while delivering a fast and responsive experience through caching, debounced search, lazy loading, and reusable React architecture.
+
+## Engineering Highlights
+
+- Integrated both AniList GraphQL and Jikan REST APIs to leverage the strengths of each data source.
+- Implemented session-based caching to reduce redundant API requests and mitigate rate-limiting issues.
+- Built a reusable component architecture using React and React Router.
+- Optimized search performance with debouncing and request management.
+- Designed responsive layouts for mobile and desktop experiences.
+- Added loading, error, and empty states for a resilient user experience.
+
 ## Features
 
 * Trending, Seasonal, and Top-Rated Anime Discovery
@@ -46,17 +59,40 @@ A production-ready anime discovery platform built with React, Vite, AniList Grap
 
 ## Architecture
 
+```text
 src/
-├── components/
-├── pages/
-├── services/
+├── components/     # Reusable UI components
+├── pages/          # Route-level screens
+├── services/       # API abstraction layer
 ├── App.jsx
 └── main.jsx
+```
 
-* Components: Reusable UI building blocks
-* Pages: Route-level screens
-* Services: API communication layer
-* React Router: Client-side routing
+### Design Decisions
+
+- Components handle presentation and UI behavior.
+- Services centralize API communication and caching logic.
+- Pages orchestrate data fetching and compose reusable components.
+- React Router manages client-side navigation.
+
+## Data Flow
+
+User Action
+    ↓
+React Component
+    ↓
+Service Layer
+    ↓
+Session Cache Check
+    ↓
+AniList / Jikan API
+    ↓
+Response
+    ↓
+State Update
+    ↓
+UI Re-render
+
 
 ## Performance Optimizations
 
@@ -114,6 +150,6 @@ Designed layouts that adapt seamlessly across mobile and desktop devices.
 
 ## Author
 
-Hrushikesh Kontham
+**Hrushikesh Kontham**
 
 GitHub: https://github.com/Hrushikesh-Kontham
